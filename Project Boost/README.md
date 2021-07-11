@@ -31,3 +31,9 @@
 
 - Scenes can be duplicated with Ctrl+D, and then changed
 - Make sure **overrides are applied to prefabs!**
+
+### Lecture 46 - Using Invoke
+
+- Invoke is used to call a method after a delay; not so good because of string references
+- You can get a reference to a script using `GetComponent`, and then disable it, if you want
+to disable a certain functionality in some scenarios
