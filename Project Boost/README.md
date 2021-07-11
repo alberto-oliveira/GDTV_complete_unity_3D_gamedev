@@ -11,6 +11,12 @@
     2. `Audio Source`: what playes the `Audio File`
     3. `Audio Listener`: what listens to the `Audio Source`
 
+- Audacity for creating audio
+
 - Common Issues with Audio:
     - **Mute Audio** is checked on  play windows, uncheck it
     - Project Settings > Audio > System Sample Rate is set to 0, and thus audio does not play
+
+### Lecture 42 - Play AudioSource SFX
+
+- For continuous SFX that play every frame a condition is true, always check if `AudioSource.isPlaying` before, to avoid overlapping plays
