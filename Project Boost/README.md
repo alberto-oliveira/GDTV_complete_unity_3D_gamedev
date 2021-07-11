@@ -20,3 +20,9 @@
 ### Lecture 42 - Play AudioSource SFX
 
 - For continuous SFX that play every frame a condition is true, always check if `AudioSource.isPlaying` before, to avoid overlapping plays
+
+### Lecture 43 - Respawn Using `SceneManager`
+
+- `SceneManager` is in `UnityEngine.SceneManagement` namespace
+- You can get index of current scene using `SceneManager.GetActiveScene().buildIndex`
+- When loading a scene, illumination may appear broken. That is because in my Unity configuratio, lighting settings are not being created for the scene automatically. So I need to create a lighting setting, and use `auto generate` to keep the lighting as is.
