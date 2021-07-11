@@ -26,3 +26,8 @@
 - `SceneManager` is in `UnityEngine.SceneManagement` namespace
 - You can get index of current scene using `SceneManager.GetActiveScene().buildIndex`
 - When loading a scene, illumination may appear broken. That is because in my Unity configuratio, lighting settings are not being created for the scene automatically. So I need to create a lighting setting, and use `auto generate` to keep the lighting as is.
+
+### Lecture 45 - Load Next Level
+
+- Scenes can be duplicated with Ctrl+D, and then changed
+- Make sure **overrides are applied to prefabs!**

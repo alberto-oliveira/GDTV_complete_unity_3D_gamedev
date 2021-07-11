@@ -11,16 +11,11 @@ public class CollisionHandler : MonoBehaviour
         switch(other.gameObject.tag)
         {
             case "Friendly":
-                Debug.Log("Bumped in friendly object");
                 break;
             case "Finish":
-                Debug.Log("Reached the finish!");
-                break;
-            case "Fuel":
-                Debug.Log("Collected Fuel!");
+                LoadNextLevel();
                 break;
             default:
-                Debug.Log("Bumped in Obstacle! DED!");
                 ReloadLevel();
                 break;
 
@@ -32,6 +27,14 @@ public class CollisionHandler : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    void LoadNextLevel()
+    {
+        int numScenes = SceneManager.sceneCountInBuildSettings;
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        
+        SceneManager.LoadScene((currentSceneIndex + 1) % numScenes);
     }
 
     void Start()
