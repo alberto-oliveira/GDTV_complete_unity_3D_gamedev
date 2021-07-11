@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
     void ProcessThrust()
     {
 
-        if(Input.GetKey(KeyCode.Space)){
+        if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)){
 
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
 
@@ -53,7 +53,8 @@ public class Movement : MonoBehaviour
 
     private void ApplyRotation(float rotationThisFrame)
     {
-        rb.freezeRotation = true;
+        rb.freezeRotation = true; //freezing rotation so we can manually rotate
         transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
+        rb.freezeRotation = false; //unfreezing rotation so the physics system can take over  
     }
 }
