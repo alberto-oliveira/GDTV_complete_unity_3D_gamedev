@@ -6,7 +6,20 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
 
+    // PARAMETERS
     [SerializeField] float sceneLoadDelay = 2f;
+    [SerializeField] AudioClip crash;
+    [SerializeField] AudioClip success;
+
+    // CACHE
+
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = gameObject.GetComponent<AudioSource>();
+    }
+
 
     void OnCollisionEnter(Collision other) {
 
@@ -28,14 +41,16 @@ public class CollisionHandler : MonoBehaviour
     void StartCrashSequence()
     {
         GetComponent<Movement>().enabled = false;
-        GetComponent<AudioSource>().enabled = false;
+        audioSource.Stop();
+        audioSource.PlayOneShot(crash, 0.5f);
         Invoke("ReloadLevel", sceneLoadDelay);
     }
 
     void StartLoadSequence()
     {
         GetComponent<Movement>().enabled = false;
-        GetComponent<AudioSource>().enabled = false;
+        audioSource.Stop();
+        audioSource.PlayOneShot(success);
         Invoke("LoadNextLevel", sceneLoadDelay);
     }
 
@@ -53,13 +68,4 @@ public class CollisionHandler : MonoBehaviour
         SceneManager.LoadScene((currentSceneIndex + 1) % numScenes);
     }
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
 }

@@ -37,3 +37,8 @@
 - Invoke is used to call a method after a delay; not so good because of string references
 - You can get a reference to a script using `GetComponent`, and then disable it, if you want
 to disable a certain functionality in some scenarios
+
+### Lecture 47 - Multiple Audio Clips
+
+- You can use `PlayOneShot` to play multiple different audio clips; use `[SerializeField]` to assign audio clips in the editor
+- Stop the audio source before playing a new clip

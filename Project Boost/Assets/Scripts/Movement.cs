@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
-    Rigidbody rb;
-    AudioSource audiosource;
-
+    // PARAMETERS
     [SerializeField] float mainThrust = 100f;
     [SerializeField] float rotationThrust = 100f;
+    [SerializeField] AudioClip mainEngine;
+
+    // CACHE
+    Rigidbody rb;
+    AudioSource audioSource;
+
+    // STATE
+
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
-        audiosource = gameObject.GetComponent<AudioSource>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -30,12 +35,12 @@ public class Movement : MonoBehaviour
         {
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
 
-            if(!audiosource.isPlaying){
-                audiosource.Play();
+            if(!audioSource.isPlaying){
+                audioSource.PlayOneShot(mainEngine);
             }
         }
         else{
-            audiosource.Stop();
+            audioSource.Stop();
         }
 
     }
