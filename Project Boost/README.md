@@ -1,4 +1,4 @@
-## Section 3 -- Notes
+## Section 3 Notes
 
 ### Lecture 39
 
