@@ -44,3 +44,13 @@ to disable a certain functionality in some scenarios
 - Stop the audio source before playing a new clip
 
 ### Lecture 48 - Bool Variable for State
+
+- When scene is loaded, state of class is reset, including variables defined for the class;
+
+### Lecture 49 - Make Rocket Look Spiffy
+
+- You can modify the prefab by double clicking on folder or clicking on the `>` in the Hierarchy
+- The childre's position and rotation is relative to the parent's
+- For prefabs with children, it is preferable have it without a meshrenderer, and its scale set to `(1, 1, 1)`. That because the `transform` of the parent is applied to the children, and thus scales different than `(1, 1, 1)` can led to several issues, for instances with rotation. In those cases, usually the children will make up the visuals of the prefab, while the parent houses stuff like scripts and audio source
+- Beware the pivoting center of the parent object for rotations
+- Remove the individual colliders of the children, and use the parent's only
