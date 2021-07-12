@@ -42,3 +42,5 @@ to disable a certain functionality in some scenarios
 
 - You can use `PlayOneShot` to play multiple different audio clips; use `[SerializeField]` to assign audio clips in the editor
 - Stop the audio source before playing a new clip
+
+### Lecture 48 - Bool Variable for State
