@@ -54,3 +54,11 @@ to disable a certain functionality in some scenarios
 - For prefabs with children, it is preferable have it without a meshrenderer, and its scale set to `(1, 1, 1)`. That because the `transform` of the parent is applied to the children, and thus scales different than `(1, 1, 1)` can led to several issues, for instances with rotation. In those cases, usually the children will make up the visuals of the prefab, while the parent houses stuff like scripts and audio source
 - Beware the pivoting center of the parent object for rotations
 - Remove the individual colliders of the children, and use the parent's only
+
+### Lecture 50 - How To Trigger Particles
+
+- There is a Unity GameObject for particles, that can be customized
+- To trigger particles depending on the position of a certain GameObject, a few steps need to be followed
+    - Add the `ParticleSystem` attributes to the script in the object that will trigger it. For instance, since the crash and success particles are effects of collisions (with objects or the finish pad), they will be part of the `CollisionHandler` script of the object; Make both attributes serializable
+    - Add the `ParticleSystem` prefabs as children of the rocket. This is important to guarantee that they will always spawn relative to the transform of the rocket, and thus can be spawn on top of it.
+    - On the two `ParticleSystem`serializable fields of the `CollisionHandler` script, drag corresponding **rocket children prefab** `ParticleSystems`. This part is very important! Drag the children, and not the original prefabs, since only the children will be anchored to the Rocket GameObject
