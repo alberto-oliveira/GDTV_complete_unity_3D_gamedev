@@ -66,3 +66,8 @@ to disable a certain functionality in some scenarios
 ### Lecture 51 - Particles for Rocket Booster
 
 - Like with the audio, check if `ParticleSystem.isPlaying` before playing it, to avoid continuously starting it
+
+### Lecture 52 - Refactor With Extract Method
+- Cool tricks for VSCode:
+    - Select code block then `ctrl + .` to extract that block to a new method/function
+    - F2 to rename symbol
