@@ -19,16 +19,25 @@ public class CollisionHandler : MonoBehaviour
 
     // STATE
     bool isTransitioning = false;
+    
+
+    // DEBUG
+    bool debugCollisionDisabled = false;
+
 
     void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
     }
 
+    void Update() {
+        DebugKeys();
+    }
+
 
     void OnCollisionEnter(Collision other) {
 
-        if(isTransitioning){ return; }
+        if(isTransitioning || debugCollisionDisabled){ return; }
 
         switch(other.gameObject.tag)
         {
@@ -77,6 +86,18 @@ public class CollisionHandler : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         SceneManager.LoadScene((currentSceneIndex + 1) % numScenes);
+    }
+
+    void DebugKeys()
+    {
+        if(Input.GetKeyDown(KeyCode.L)){
+            Debug.Log("Debug Key L: Loading next level");
+            LoadNextLevel();
+        }
+        else if(Input.GetKeyDown(KeyCode.C)){
+            Debug.Log("Debug Key C: Disabling collisions. Press Again to enable");
+            debugCollisionDisabled = !debugCollisionDisabled;
+        }
     }
 
 }
