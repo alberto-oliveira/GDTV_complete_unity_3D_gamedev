@@ -75,3 +75,13 @@ to disable a certain functionality in some scenarios
 ### Lecture 53 - Add Cheat/Debug Keys
 
 ### Lecture 54 - Make Environment from Blocks
+
+- Changing the Skybox:
+    - Open the Lighting Tab > Environment
+    - Create a material for the skybox
+    - Drag the material in the Skybox field of Environment tab
+    - Change the material shader to Skybox>Procedural, change settings to taste
+- To make it totally black
+    - Go to main camera
+    - Change the background to black
+    - Change the Clear Flags to `Solid Color`
