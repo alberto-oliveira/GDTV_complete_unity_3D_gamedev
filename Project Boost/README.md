@@ -62,3 +62,7 @@ to disable a certain functionality in some scenarios
     - Add the `ParticleSystem` attributes to the script in the object that will trigger it. For instance, since the crash and success particles are effects of collisions (with objects or the finish pad), they will be part of the `CollisionHandler` script of the object; Make both attributes serializable
     - Add the `ParticleSystem` prefabs as children of the rocket. This is important to guarantee that they will always spawn relative to the transform of the rocket, and thus can be spawn on top of it.
     - On the two `ParticleSystem`serializable fields of the `CollisionHandler` script, drag corresponding **rocket children prefab** `ParticleSystems`. This part is very important! Drag the children, and not the original prefabs, since only the children will be anchored to the Rocket GameObject
+
+### Lecture 51 - Particles for Rocket Booster
+
+- Like with the audio, check if `ParticleSystem.isPlaying` before playing it, to avoid continuously starting it
