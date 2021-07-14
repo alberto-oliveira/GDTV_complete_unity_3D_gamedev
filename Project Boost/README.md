@@ -85,3 +85,9 @@ to disable a certain functionality in some scenarios
     - Go to main camera
     - Change the background to black
     - Change the Clear Flags to `Solid Color`
+
+### Lecture 55 - How to Add Lights from Unity
+
+    - He talks about types of light and emissive materials
+
+### Lecture 56 - Move Object with Code
