@@ -91,3 +91,5 @@ to disable a certain functionality in some scenarios
     - He talks about types of light and emissive materials
 
 ### Lecture 56 - Move Object with Code
+    
+    - You can add `[Range(X, Y)]` in front of `[SerializeField]` to add a range slider for the variable
