@@ -97,3 +97,7 @@ to disable a certain functionality in some scenarios
 ### Lecture 57 - Mathf.Sin() for Oscillation
 
     - Oscillator uses the sine function to oscillate the object with time
+
+### Lecture 58 - Protect against NaN error
+
+    - Mathf.Epsilon to compare very small floats
