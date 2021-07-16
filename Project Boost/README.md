@@ -93,3 +93,7 @@ to disable a certain functionality in some scenarios
 ### Lecture 56 - Move Object with Code
     
     - You can add `[Range(X, Y)]` in front of `[SerializeField]` to add a range slider for the variable
+
+### Lecture 57 - Mathf.Sin() for Oscillation
+
+    - Oscillator uses the sine function to oscillate the object with time
