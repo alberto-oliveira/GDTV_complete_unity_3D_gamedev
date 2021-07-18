@@ -103,3 +103,7 @@ to disable a certain functionality in some scenarios
     - Mathf.Epsilon to compare very small floats
 
 ### Lecture 59 - Designing Level Moments
+
+### Lecture 60 - Quit Application
+
+    - With `Application.Quit()`
