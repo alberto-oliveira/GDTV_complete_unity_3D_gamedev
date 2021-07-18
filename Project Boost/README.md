@@ -101,3 +101,5 @@ to disable a certain functionality in some scenarios
 ### Lecture 58 - Protect against NaN error
 
     - Mathf.Epsilon to compare very small floats
+
+### Lecture 59 - Designing Level Moments
