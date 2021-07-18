@@ -107,3 +107,7 @@ to disable a certain functionality in some scenarios
 ### Lecture 60 - Quit Application
 
     - With `Application.Quit()`
+
+### Lecture 61 - How to Build & Publish a Game
+
+    - Rick shows the building process and how to share games on `https://sharemygame.com/`
