@@ -1,4 +1,4 @@
-## Section 3 Notes
+## Section 3: Project Boost Notes
 
 ### Lecture 39 - RigidBody Constraints
 
