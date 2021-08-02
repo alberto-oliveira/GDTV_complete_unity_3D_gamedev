@@ -28,4 +28,11 @@
 - Set the terrain to `y = -H`, `H` being the height set at the previous step, so objects don't need to have their `y` adjusted
 - Holding down `right click` to look around, you can use the WASD keys to move like an FPS. Mouse scroll adjust speed, and `shift` increases speed. You can change the maximum speed at the camera button close to the *Gizmos* button, and also disable camera acceleration
 
-### Lecture 65 - Unity Terrain Tools
+### Lecture 66 - Unity Terrain Tools
+
+- Terrain Tools Package: might need to go on `Edit > Project Settings > Package Manager` and tick `Allow Preview Packages`
+
+### Lecture 67 - How to Use Unity Asset Store
+
+- Assets appear on packagem manager
+- You can open the asset store through `Window > Asset Store`
