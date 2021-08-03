@@ -12,6 +12,8 @@
 
 # Ignoring imported terrain tools stuff (too big)
 /[Aa]ssets/Samples/Terrain Tools/
+/[Aa]ssets/[Ss]tandard Assets/
+/[Aa]ssets/[Tt]ree9/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

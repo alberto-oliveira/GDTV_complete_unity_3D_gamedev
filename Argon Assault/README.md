@@ -36,3 +36,10 @@
 
 - Assets appear on packagem manager
 - You can open the asset store through `Window > Asset Store`
+
+### Lecture 68 - Texturing Terrain in Unity
+
+- To paint texture in terrain, you can use the "Paint Texture" option in "Paint Terrain".
+- To paint, new layers need to be added. Scroll down, and add a new layer by selecting the "albedo" texture. You can then add a normal map and a mask map, if available
+- In case repetition of the layer looks weird, you can adjust the Tilling Settings with a bigger size or different offset
+- To create interesting looking terrains, you can overlap terrains using brushes with different strenght
